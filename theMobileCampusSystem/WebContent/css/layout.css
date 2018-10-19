@@ -1,0 +1,94 @@
+body {
+	font-family: Microsoft YaHei;font-size: 14px;color:#FFFFFF;
+}
+.all{
+	margin: auto;border:1px solid #b4c8d2;background:url(../images/back.jpg);width: 80%;margin-left: 10%;
+}
+.text5 a:link{
+	color:#236B8E;text-decoration:none;
+}
+.text5 a:hover{
+	text-decoration: underline;
+}
+.text5 a:visited{
+	color:#236B8E;
+}
+.page a:hover{
+	text-decoration: underline;
+}
+.page a:link{
+	text-decoration:none;color:#236B8E;
+}
+.page a:visited{
+	color:#236B8E;
+}
+.container{
+	margin:0 auto;overflow: hidden;
+}
+.head{
+	height: 100px;overflow: hidden;background: rgba(255,255,255, 0.9);
+}
+.logo{
+	 float: left;width:8%;margin-left: 5%;font-size: 60px;color:  #236B8E;margin-top: 5px;
+}
+.logo1{
+	height: 120px;float: left;width:50%;margin-top: 15px;
+}
+.name{
+	height:120px;float: right;width: 15%;font-size: 15px;color: #236B8E;margin-top: 5%;
+}
+
+.news{
+	width:20%;float:left;border:1px solid #90cae2;background: #fff;
+}
+.today{
+	width: 100%;height:30px;background: #90cae2;color: #fff;text-align: center;font-size: 16px;
+}
+.imgnew{
+	width: 80%;height:150px;overflow: hidden;margin-left: 10%;margin-top: 20px;float: left;margin-bottom: 20px;
+}
+.page{
+	width: 80%;float: left;margin-left: 10%;color:#236B8E;text-align: center;overflow: hidden;height: 40px;margin-bottom: 10px;text-overflow:ellipsis;
+}
+.main{
+	width: 100%;background: #90cae2;font-size: 22px;text-align: center;height: 60px;float: left;border:1px solid #fff;
+}
+.mainpic{
+	width: 30%;float: left;overflow: hidden;margin-top: 3%;
+}
+.maintext{
+	width: 50%;float:left;margin-top: 10px;
+}
+.register{
+	width: 79.7%;float:left;color: #236B8E;margin-bottom: 30px;
+}
+.xuan{
+	width: 60%;margin-left: 15%;float: left;margin-top: 16.8%;background: rgba(255,255,255, 0.8);border-radius:5px 0;
+}
+.text1{
+	width: 100%;height: 30px;text-align: center;font-size: 20px;font-weight: bold;
+}
+.text2{
+	width: 100%;height: 30px;text-align: center;margin-top: 20px;font-size: 15px;font-weight: bold;
+}
+.text3{
+	width: 100%;height: 30px;text-align: center;margin-top: 20px;font-size: 15px;font-weight: bold;
+}
+.text4{
+	width: 100%;height: 30px;text-align: center;margin-top: 20px;font-size: 15px;font-weight: bold;
+}
+.text5{
+	width: 100%;height: 30px;text-align: center;margin-top: 20px;font-size: 15px;margin-bottom: 15px;font-weight: bold;
+}
+.te1{
+	border:1px solid #236B8E;height:25px;margin-left:30px;
+}
+.te2{
+	border:1px solid #236B8E;height:25px;margin-left:30px;
+}
+.te3{
+	border:2px solid #236B8E;height:28px;color: #fff;background: #236B8E;width:50px;font-size: 15px;
+}
+.down{
+	background: #CDCDCD;color:#236B8E;height: 20px;font-size: 10px;text-align: center;line-height:20px;
+}

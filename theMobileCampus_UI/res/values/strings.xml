@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">校园通</string>
+    <string name="action_settings">Settings</string>
+    <item name="Tag_APP" type="id"></item>
+    <item name="Tag_Book" type="id"></item>
+
+</resources>

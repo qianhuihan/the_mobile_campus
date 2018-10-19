@@ -1,0 +1,199 @@
+<LinearLayout    
+        android:layout_width="fill_parent"   
+        android:layout_height="fill_parent"  
+        android:orientation="vertical" 
+        android:background="#fff"
+        xmlns:android="http://schemas.android.com/apk/res/android">  
+        <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:padding="10sp">
+        <ImageButton 
+             android:id="@+id/coc_back"
+             android:layout_width="30sp"
+             android:layout_height="20sp"
+             android:scaleType="fitCenter"
+             android:layout_alignParentLeft="true"
+             android:background="#fff"
+             android:src="@drawable/gback"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:textColor="#000"
+            android:text="课程详情" />
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:layout_width="fill_parent"   
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >"
+         <TextView
+            android:id="@+id/coc_cname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20sp"
+            android:textSize="23sp"
+            android:textColor="#000"
+            android:text="课程名字" />
+         
+         <LinearLayout
+            android:layout_width="fill_parent"   
+            android:layout_height="wrap_content"
+            android:paddingLeft="20sp"
+            android:paddingBottom="10sp"
+            android:orientation="horizontal">
+         <ImageView 
+             android:layout_width="20sp"   
+             android:layout_height="20sp"
+             android:src="@drawable/classroom"/>"
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:textSize="15sp"
+            android:textColor="#5e6364"
+            android:text="教室" />
+          <TextView
+            android:id="@+id/coc_cplace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:text="法学B102" />
+          
+         </LinearLayout>
+         <LinearLayout
+            android:layout_width="fill_parent"   
+            android:layout_height="wrap_content"
+            android:paddingLeft="20sp"
+            android:paddingBottom="10sp"
+            android:orientation="horizontal">
+         <ImageView 
+             android:layout_width="20sp"   
+             android:layout_height="20sp"
+             android:src="@drawable/time"/>
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:textSize="15sp"
+            android:textColor="#5e6364"
+            android:text="时间" />
+          <TextView
+            android:id="@+id/coc_ctime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:text="周三 1-2" />  
+         </LinearLayout>
+         <View style="@style/bg_line"/>
+         
+         <LinearLayout
+            android:layout_width="fill_parent"   
+            android:layout_height="wrap_content"
+            android:padding="20sp"
+            android:orientation="horizontal">
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:text="授课教师" />
+          <TextView
+            android:id="@+id/coc_cteacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30sp"
+            android:paddingRight="10sp"
+            android:textSize="17sp"
+            android:textColor="#5e6364"
+            android:text="汪峰" />  
+          <ImageView 
+             android:layout_width="20sp"   
+             android:layout_height="20sp"
+             android:src="@drawable/teacher"/>
+         </LinearLayout>
+         
+         <LinearLayout
+            android:layout_width="fill_parent"   
+            android:layout_height="wrap_content"
+            android:paddingLeft="20sp"
+            android:paddingBottom="10sp"
+            android:orientation="horizontal">
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#5e6364"
+            android:text="联系电话" />
+          <TextView
+            android:id="@+id/coc_cphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:text="666888" /> 
+            </LinearLayout>
+            
+          <LinearLayout
+            android:layout_width="fill_parent"   
+            android:layout_height="wrap_content"
+            android:paddingLeft="20sp"
+            android:paddingBottom="10sp"
+            android:orientation="horizontal">
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#5e6364"
+            android:text="教师职称" />
+          <TextView
+            android:id="@+id/coc_ctitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:text="教授" />  
+            </LinearLayout>
+            
+          <LinearLayout
+            android:layout_width="fill_parent"   
+            android:layout_height="wrap_content"
+            android:paddingLeft="20sp"
+            android:paddingBottom="10sp"
+            android:orientation="horizontal">
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#5e6364"
+            android:text="电子邮箱" />
+          <TextView
+            android:id="@+id/coc_cemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10sp"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:text="29301718@126.com" />     
+         </LinearLayout>
+         
+        <Button 
+            android:layout_width="150sp"
+            android:layout_height="50sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40sp"
+            android:text="签    到"
+            android:background="#3aa3c5"
+            android:textColor="#fff"/>
+     
+        </LinearLayout>
+</LinearLayout>

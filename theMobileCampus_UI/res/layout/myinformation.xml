@@ -1,0 +1,183 @@
+<LinearLayout    
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"   
+        android:layout_height="fill_parent"   
+        android:background="#ffffff"
+        android:orientation="vertical">  
+        <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:padding="10sp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:textColor="#000"
+            android:text="我的信息" />
+        </RelativeLayout>
+        <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+         <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180sp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/my" />
+
+         <ImageButton
+             android:id="@+id/imageButton1"
+             android:layout_width="80sp"
+             android:layout_height="80sp"
+             android:layout_alignParentTop="true"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="36dp"
+             android:scaleType="centerCrop"
+             android:src="@drawable/people1" />
+         <LinearLayout   
+             android:layout_width="wrap_content"   
+             android:layout_height="wrap_content" 
+             android:padding="10sp" 
+             android:orientation="horizontal"
+             android:layout_below="@+id/imageButton1"
+             android:layout_centerHorizontal="true" >
+
+         <TextView
+             android:id="@+id/imagetouxiang" 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="东方不败"
+             android:layout_marginRight="5sp"
+             android:textColor="#fff"
+             android:textSize="16sp" />
+         <ImageView 
+             android:layout_width="17sp"
+             android:layout_height="17sp"
+             android:scaleType="centerCrop"
+             android:layout_marginTop="3sp"
+             android:src="@drawable/girl"/>
+         </LinearLayout>
+        </RelativeLayout>
+        
+         <LinearLayout    
+             android:layout_width="fill_parent"   
+             android:layout_height="wrap_content" 
+             android:background="#ffffff"
+             android:orientation="vertical" >
+         
+         <RelativeLayout 
+             android:layout_width="wrap_content"   
+             android:layout_height="wrap_content"
+             android:padding="10sp" 
+             android:orientation="horizontal" >
+             <TextView 
+                 android:id="@+id/my_number"
+                 style="@style/usertext" 
+                 android:text="学号" />
+             <TextView 
+                 android:id="@+id/my_connumber"
+                 style="@style/concretetext" 
+                 android:text="201427885610"
+                 android:layout_toRightOf="@+id/my_number"
+                 android:layout_marginLeft="30sp" />
+            
+         </RelativeLayout>
+         <View style="@style/bg_line"/>
+         
+          <RelativeLayout 
+             android:layout_width="wrap_content"   
+             android:layout_height="wrap_content"
+             android:padding="10sp" 
+             android:orientation="horizontal" >
+             <TextView 
+                 android:id="@+id/my_name"
+                 style="@style/usertext" 
+                 android:text="姓名" />
+             <TextView 
+                 android:id="@+id/my_conname"
+                 style="@style/concretetext" 
+                 android:text="东方不败"
+                 android:layout_toRightOf="@+id/my_name"
+                 android:layout_marginLeft="30sp" /> 
+         </RelativeLayout>
+          <View style="@style/bg_line"/>
+          
+           <RelativeLayout 
+             android:layout_width="wrap_content"   
+             android:layout_height="wrap_content"
+             android:padding="10sp" 
+             android:orientation="horizontal" >
+             <TextView 
+                 android:id="@+id/my_class"
+                 style="@style/usertext" 
+                 android:text="班级" />
+             <TextView 
+                 android:id="@+id/my_conclass"
+                 style="@style/concretetext" 
+                 android:layout_toRightOf="@+id/my_class"
+                 android:layout_marginLeft="30sp" />
+         </RelativeLayout>
+          <View style="@style/bg_line"/>
+          <RelativeLayout 
+             android:layout_width="wrap_content"   
+             android:layout_height="wrap_content"
+             android:padding="10sp" 
+             android:orientation="horizontal" >
+             <TextView 
+                 android:id="@+id/my_intro"
+                 style="@style/usertext" 
+                 android:text="电话" />
+             <TextView 
+                 android:id="@+id/my_phone"
+                 style="@style/concretetext" 
+                  android:clickable="true"
+                 android:layout_toRightOf="@+id/my_intro"
+                 android:layout_marginLeft="30sp" />
+             <ImageView 
+                 style="@style/img_arrow"
+                 android:layout_alignParentRight="true"/>
+             
+         </RelativeLayout>
+         <View style="@style/bg_line"/>
+          <RelativeLayout 
+             android:layout_width="wrap_content"   
+             android:layout_height="wrap_content"
+             android:padding="10sp" 
+             android:orientation="horizontal" >
+          <TextView 
+                 android:id="@+id/my_email"
+                 style="@style/usertext" 
+                 android:text="邮箱" />
+             <TextView 
+                 android:id="@+id/my_emaill"
+                 style="@style/concretetext" 
+                 android:clickable="true"
+                 android:layout_toRightOf="@+id/my_email"
+                 android:layout_marginLeft="30sp" />
+             <ImageView 
+                 style="@style/img_arrow"
+                 android:layout_alignParentRight="true"/>
+             </RelativeLayout>
+          <View style="@style/bg_line"/>
+          <RelativeLayout 
+             android:layout_width="wrap_content"   
+             android:layout_height="wrap_content"
+             android:padding="10sp" 
+             android:orientation="horizontal" >
+            <TextView 
+                 android:id="@+id/my_affiliation"
+                 style="@style/usertext" />
+             <TextView 
+                 android:id="@+id/my_coaffiliation"
+                 style="@style/concretetext" 
+                 android:clickable="true"
+                 android:layout_toRightOf="@+id/my_affiliation"
+                 android:layout_marginLeft="30sp" />
+             </RelativeLayout>
+         </LinearLayout>
+         <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"/>
+    
+</LinearLayout>

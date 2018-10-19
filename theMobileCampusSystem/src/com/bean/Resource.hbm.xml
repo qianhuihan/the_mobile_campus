@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-6-4 13:09:54 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bean.Resource" table="RESOURCE">
+        <id name="RID" type="int">
+            <column name="RID" />
+            <generator class="assigned" />
+        </id>
+        <property name="Rname" type="java.lang.String">
+            <column name="RNAME" />
+        </property>
+        <property name="file" type="java.lang.String">
+            <column name="FILE" />
+        </property>
+        <property name="down" type="int">
+            <column name="DOWN" />
+        </property>
+        <property name="TID" type="java.lang.String">
+            <column name="TID" />
+        </property>
+        <property name="date" type="java.lang.String">
+            <column name="DATE" />
+        </property>
+    </class>
+</hibernate-mapping>

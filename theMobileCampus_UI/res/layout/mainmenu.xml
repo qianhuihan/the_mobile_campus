@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.lishuang.administrator.viewpager0901.TitleActivity">
+    <FrameLayout
+        android:id="@+id/fragment_container"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content" 
+        android:layout_alignParentTop="true"
+        android:background="#ffffff"
+        />
+    <RadioGroup  
+        android:id="@+id/bottomMenu"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  
+        android:layout_alignParentBottom="true"  
+        android:orientation="horizontal"  
+        android:background="#666666">  
+  
+        <RadioButton  
+            android:id="@+id/rbNew"  
+            android:layout_width="0dp"  
+            android:layout_height="wrap_content"  
+            android:checked="true"  
+            android:drawableTop="@drawable/p1"  
+            style="@style/BottomMenu"   
+            android:text="首页"
+            android:clickable="false"/>  
+  
+        <RadioButton  
+            android:id="@+id/rbUpload"  
+            android:layout_width="0dp"  
+            android:layout_height="wrap_content"  
+            android:drawableTop="@drawable/p2"  
+            style="@style/BottomMenu"  
+            android:text="消息"
+            android:clickable="false"/>  
+  
+        <RadioButton  
+            android:id="@+id/rbFresh"  
+            android:layout_width="0dp"  
+            android:layout_height="wrap_content"  
+            android:drawableTop="@drawable/p3"  
+            style="@style/BottomMenu"  
+            android:text="课程表"
+            android:clickable="false"/>  
+  
+        <RadioButton  
+            android:id="@+id/rbSort"  
+            android:layout_width="0dp"  
+            android:layout_height="wrap_content"  
+            android:drawableTop="@drawable/p4"  
+            style="@style/BottomMenu"  
+            android:text="资源"
+            android:clickable="false"/>  
+  
+        <RadioButton  
+            android:id="@+id/rbTransfer"  
+            android:layout_width="0dp"  
+            android:layout_height="wrap_content"  
+            android:drawableTop="@drawable/p5"  
+            style="@style/BottomMenu"  
+            android:text="我的"
+            android:clickable="false"/>  
+  
+    </RadioGroup>  
+
+</RelativeLayout>

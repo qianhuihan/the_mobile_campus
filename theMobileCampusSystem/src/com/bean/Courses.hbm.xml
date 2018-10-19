@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-4-10 21:23:39 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bean.Courses" table="COURSES">
+        <id name="CID" type="java.lang.String">
+            <column name="CID" />
+            <generator class="assigned" />
+        </id>
+        <property name="Cname" type="java.lang.String">
+            <column name="CNAME" />
+        </property>
+        <property name="TID" type="java.lang.String">
+            <column name="TID" />
+        </property>
+        <property name="time" type="java.lang.String">
+            <column name="CTIME" />
+        </property>
+        <property name="wday" type="java.lang.String">
+            <column name="CDAY" />
+        </property>
+        <property name="place" type="java.lang.String">
+            <column name="PLACE" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,171 @@
+body {
+	font-family: Microsoft YaHei;font-size: 14px;color:#FFFFFF;
+}
+.all{
+	margin: auto;border:1px solid #b4c8d2;background:url(../images/back.jpg);width: 80%;margin-left: 10%;
+}
+.main:hover{
+	color: #236B8E;background-color: #fff;
+}
+.main:link{
+	color: #fff;text-decoration:none;
+}
+.r1_news a:link{
+	color: #236B8E;text-decoration:none;font-weight: bold;
+}
+.r1_news a:hover{
+	font-weight: bold;
+}
+.r1_news a:visited{
+	color:#236B8E;
+}
+.cw2 a:link{
+	color:#fff;text-decoration:none;
+}
+.cw2 a:hover{
+	text-decoration: underline;
+}
+.cw2 a:visited{
+	color:#fff;
+}
+.exit a:link{
+	color:#236B8E;text-decoration:none;
+}
+.exit a:visited{
+	color:#236B8E;
+}
+.container{
+	margin:0 auto;overflow: hidden;
+}
+.head{
+	height: 100px;overflow: hidden;background: rgba(255,255,255, 0.9);
+}
+.logo{
+	 float: left;width:8%;margin-left: 5%;font-size: 60px;color:  #236B8E;margin-top: 5px;
+}
+.logo1{
+	height: 120px;float: left;width:50%;margin-top: 15px;
+}
+.exit{
+	float: right;width: 15%;color: #236B8E;margin-top: 6%;
+}
+.person{
+	width:20%;float:left;
+}
+.wen{
+	width: 100%;height:100px;background: rgba(255,255,255, 0.8);overflow: hidden;border:1px solid #fff;
+}
+.sid{
+	width: 100%;color: #236B8E;font-size: 13px;height: 30px;margin-left: 15px;margin-top: 5px;
+}
+.main{
+	width: 100%;background: #90cae2;font-size: 22px;text-align: center;height: 60px;float: left;color: #fff;
+}
+.mainpic{
+	width: 30%;float: left;overflow: hidden;margin-top: 3%;
+}
+.maintext{
+	width: 50%;float:left;margin-top: 10px;
+}
+.down{
+	background: #CDCDCD;color:#236B8E;height: 20px;font-size: 10px;text-align: center;line-height:20px;
+}
+.todayclass{
+	width: 100%;float: left;
+}
+.classwen{
+	width: 100%;float: left;height: 30px;background: rgba(0,0,0, 0.6);padding-top: 10px;
+}
+.cw1{
+	width: 80%;float: left;color:  #fff;text-align: center;font-size: 15px;font-weight: bold;
+}
+.cw2{
+	width: 20%;float: left;font-size: 12px;
+}
+.c1{
+	width: 100%;background: rgba(233,16,16, 0.6);color: #fff;height: 30px;float: left;padding-top: 10px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+}
+.c2{
+	width: 100%;background: rgba(57,233,16, 0.6);color: #fff;float: left;height: 30px;padding-top: 10px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+}
+.c3{
+	width: 100%;background: rgba(148,39,205, 0.6);color: #fff;float: left;height: 30px;padding-top: 10px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+}
+.message{
+	width: 100%;float: left;background: rgba(0,0,0, 0.6);height: 150px;
+}
+.mewen{
+	height: 20px;text-align: center;padding-top: 10px;font-weight: bold;font-size: 15px;
+}
+.jume{
+	width: 90%;margin-left: 5%;margin-top: 10px;
+}
+.up{
+	width: 80%;float: left;
+}
+.up_left{
+	width: 50%;float: left;margin-left: 10%;margin-top: 10%;background: rgba(255,255,255, 0.8);padding-top: 10px;border: 2px solid #236B8E;
+}
+.left_word{
+	width: 100%;float: left;height: 30px;font-size: 13px;margin-left: 5%;color: #236B8E;
+}
+.up_right{
+	width: 30%;float: right;margin-top: 11%;
+}
+.b1{
+	height: 40px;text-align: center;width: 190px;color: #000;font-size: 15px;margin-bottom: 1px;
+}
+.below{
+	width: 60%;float: left;margin-left: 8%;margin-top: 3%;
+}
+.homework_title{
+	width: 100%;float: left;padding-left: 1%;font-size: 18px;color: #114499;padding-bottom: 1%;
+}
+.xian{
+	width: 100%;height: 1px;background-color: #3d759c;margin-top: 5px;float: left;
+}
+.home_ju{
+	width: 100%;float: left;background-color: #fff;
+}
+.h_tit{
+	width: 100%;float: left;padding-top: 1%;padding-bottom: 1%;background: rgba(82,136,173, 0.6);
+}
+.h1{
+	width: 32%;float: left;padding-left: 5px;
+}
+.h_ju{
+	width: 100%;float: left;padding-top: 1%;padding-bottom: 1%;background: rgba(164,168,190, 0.8);
+}
+.h_ju2{
+	width: 100%;float: left;padding-top: 1%;padding-bottom: 1%;background: rgba(98,118,136, 0.8);
+}
+.h2 a:link{
+	color:#421c0d;text-decoration:none;
+}
+.h2 a:hover{
+	text-decoration:underline;
+}
+.h2 a:visited{
+	color:#421c0d;
+}
+.h2{
+	width: 32%;float: left;padding-left: 5px;color: #421c0d;
+}
+.h3{
+	width: 17%;float: left;padding-left: 5px;color: #421c0d;
+}
+.b2 a:link{
+	color:#275c8e;text-decoration:none;
+}
+.b2:hover{
+	color: #fff;background-color: #275c8e;
+}
+.b2 a:visited{
+	color:#275c8e;
+}
+.b2{
+	width: 10%;float: left;color: #275c8e;background-color: #d0dce7;text-align: center;border: 1px solid #fff;
+}
+.b3{
+	width: 10%;float: left;color: #421c0d;text-align: center;
+}

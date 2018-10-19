@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/theMobileCampusSystem">
+		</property>
+		<property name="username" value="root"></property>
+		<property name="password" value="root"></property>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/bean/Courses.hbm.xml</value>
+				<value>com/bean/Students.hbm.xml</value>
+				<value>com/bean/Teachers.hbm.xml</value>
+				<value>com/bean/Administrator.hbm.xml</value>
+				<value>com/bean/Clacourse.hbm.xml</value>
+				<value>com/bean/News.hbm.xml</value>
+				<value>com/bean/Phones.hbm.xml</value>
+				<value>com/bean/Information.hbm.xml</value>
+				<value>com/bean/SignInTable.hbm.xml</value>
+				<value>com/bean/RollCallTable.hbm.xml</value>
+				<value>com/bean/ClassInform.hbm.xml</value>
+				<value>com/bean/Resource.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="administratorDao" class="com.dao.impl.AdministratorDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="administratorService" class="com.service.impl.AdministratorServiceImpl"
+		abstract="false" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="administratorDao" ref="administratorDao" />
+	</bean>
+	
+	<bean id="studentsDao" class="com.dao.impl.StudentsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="studentsService" class="com.service.impl.StudentsServiceImpl"
+		abstract="false" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="studentsDao" ref="studentsDao" />
+	</bean>
+	
+	<bean id="teachersDao" class="com.dao.impl.TeachersDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="teachersService" class="com.service.impl.TeachersServiceImpl"
+		abstract="false" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="teachersDao" ref="teachersDao" />
+	</bean>
+	
+	<bean id="newsDao" class="com.dao.impl.NewsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="newsService" class="com.service.impl.NewsServiceImpl"
+		abstract="false" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="newsDao" ref="newsDao" />
+	</bean>
+	
+	<bean id="phonesDao" class="com.dao.impl.PhonesDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="phonesService" class="com.service.impl.PhonesServiceImpl"
+		abstract="false" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="phonesDao" ref="phonesDao" />
+	</bean>
+	
+	<bean id="coursesDao" class="com.dao.impl.CoursesDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="coursesService" class="com.service.impl.CoursesServiceImpl"
+		abstract="false" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="coursesDao" ref="coursesDao" />
+	</bean>
+	
+	<bean id="informationDao" class="com.dao.impl.InformationDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="informationService" class="com.service.impl.InformationServiceImpl"
+		abstract="false" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="informationDao" ref="informationDao" />
+	</bean>
+	
+	<bean id="resourceDao" class="com.dao.impl.ResourceDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="resourceService" class="com.service.impl.ResourceServiceImpl"
+		abstract="false" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="resourceDao" ref="resourceDao" />
+	</bean>
+<!-- 
+
+	<bean id="initializeAction" class="com.action.InitializeAction" scope="prototype"></bean>
+	
+ -->
+</beans>

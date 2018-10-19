@@ -1,0 +1,59 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"/>
+     <LinearLayout 
+         android:id="@+id/item_second_linearLayout1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation = "vertical">
+    <RelativeLayout 
+             android:layout_width="wrap_content"   
+             android:layout_height="40sp"
+             android:padding="10sp" 
+             android:orientation="horizontal" >
+             <ImageView 
+                 android:id="@+id/my_learn"
+                 android:layout_width="20sp"   
+                 android:layout_height="20sp"
+                 android:src="@drawable/learn" />
+             <TextView 
+                 android:id="@+id/my_number"
+                 android:layout_toRightOf="@+id/my_learn"
+                 android:layout_width="wrap_content"   
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="10sp"
+                 android:textColor="#1484bf"
+                 android:text="星期三" />
+              <TextView 
+                 android:text="12周"
+                 android:layout_toRightOf="@+id/my_number"
+                 android:layout_marginLeft="10sp"
+                 android:textColor="#1484bf"
+                 android:layout_width="wrap_content"   
+                 android:layout_height="wrap_content" />
+              <Button 
+                 android:id="@+id/all_class"
+                 android:text="查看全部课程"
+                 android:layout_toLeftOf="@+id/today_img"
+                 android:layout_marginRight="5sp"
+                 android:textColor="#b5becd"
+                 android:layout_width="wrap_content"
+                 android:background="#fff"   
+                 android:textSize="12sp"
+                 android:layout_height="20sp" />
+             <ImageView 
+                 style="@style/img_arrow"
+                 android:id="@+id/today_img"
+                 android:layout_alignParentRight="true"/>
+         </RelativeLayout>
+         <View 
+             style="@style/bg_line"/>
+        
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-4-20 13:49:30 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bean.Phones" table="COMMONPHONE">
+        <id name="PID" type="int">
+            <column name="PID" />
+            <generator class="assigned" />
+        </id>
+        <property name="departmentName" type="java.lang.String">
+            <column name="DEPARTMENTNAME" />
+        </property>
+        <property name="phone" type="java.lang.String">
+            <column name="PHONE" />
+        </property>
+        <property name="place" type="java.lang.String">
+            <column name="PLACE" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-17 20:00:24 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bean.SignInTable" table="SIGNINTABLE">
+    <composite-id >  
+        <key-property name="CID" type="java.lang.String">
+            <column name="CID" />
+        </key-property>
+        <key-property name="SID" type="java.lang.String">
+            <column name="SID" />
+        </key-property>
+        <key-property name="Sdate" type="java.lang.String">
+            <column name="SDATE" />
+        </key-property>
+    </composite-id>
+    
+        <property name="stime" type="java.lang.String">
+            <column name="STIME" />
+        </property>
+        <property name="distance" type="double">
+            <column name="DISTANCE" />
+        </property>
+        
+        <property name="deadline" type="long">
+            <column name="DEADLINE" />
+        </property>
+    </class>
+</hibernate-mapping>

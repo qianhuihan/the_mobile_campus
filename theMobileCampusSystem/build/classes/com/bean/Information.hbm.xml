@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-19 16:19:06 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.bean.Information" table="INFORMATION">
+        <id name="IID" type="int">
+            <column name="IID" />
+            <generator class="assigned" />
+        </id>
+        <property name="SID" type="java.lang.String">
+            <column name="SID" />
+        </property>
+        <property name="TID" type="java.lang.String">
+            <column name="TID" />
+        </property>
+        <property name="sender" type="java.lang.String">
+            <column name="SENDER" />
+        </property>
+        <property name="time" type="java.lang.String">
+            <column name="TIME" />
+        </property>
+        <property name="body" type="java.lang.String">
+            <column name="BODY" />
+        </property>
+    </class>
+</hibernate-mapping>

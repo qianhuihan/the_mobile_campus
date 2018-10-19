@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"/>
+    
+    <ListView 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        android:background="#fff" 
+        android:divider="#b5becd" 
+        android:layout_marginBottom="55sp"
+        android:dividerHeight="1px" 
+        android:id="@+id/phone_MyListView">               
+        </ListView>
+</LinearLayout>

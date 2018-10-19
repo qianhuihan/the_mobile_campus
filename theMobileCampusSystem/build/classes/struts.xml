@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+   "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!-- 此处用constant元素定义常量 -->
+	<constant name="struts.devMode" value="true" />
+	<!-- 定义资源文件的位置和类型 -->
+	<constant name="struts.custom.i18n.resources" value="properties/myMessages" />
+	<!-- 设置应用使用的解析码 -->
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<!-- 设置应用使用的上传解析器类型 -->
+	<constant name="struts.multipart.parser" value="jakarta" />
+	<!-- 指定使用按type的自动装配策略 -->
+	<constant name="struts.objectFactory.spring.autoWire" value="name" />
+	
+	<!-- Web -->
+	<package name="default" extends="struts-default">
+		<default-action-ref name="indexAction"></default-action-ref>
+		<action name="indexAction" class="com.action.IndexAction">
+			<result name="success">/index.jsp</result>
+		</action>
+	</package>
+	
+	<package name="LoginPackage" extends="struts-default">
+		<action name="login" class="com.action.LoginAction">
+			<result name="success">/index.jsp</result>
+			<result name="input">/index.jsp</result>
+		</action>
+	</package>
+	
+	<package name="FindACoursePackage" extends="struts-default">
+		<action name="findACourse" class="com.action.ShowSingleCourseAction">
+			<result name="success">/softwareProject.jsp</result>
+			<result name="input">/teacherCourses.jsp</result>
+		</action>
+	</package>
+	
+	<package name="RollCallPackage" extends="struts-default">
+		<action name="rollCall" class="com.action.RollCallAction">
+			<result name="success">/showRollCallTable.jsp</result>
+		</action>
+	</package>
+	
+	<package name="SignInPackage" extends="struts-default">
+		<action name="signin" class="com.action.SignInAction">
+			<result name="success">/softwareProject.jsp</result>
+		</action>
+	</package>
+	
+	<package name="ShowInformationPackage" extends="struts-default">
+		<action name="showInformation" class="com.action.ShowInformationAction">
+			<result name="success">/sendMessage.jsp</result>
+		</action>
+	</package>
+	
+	<package name="GetConcreteInformPackage" extends="struts-default">
+		<action name="getConcreteInform" class="com.action.GetConcreteInformAction">
+			<result name="success">/sendMessage.jsp</result>
+		</action>
+	</package>
+	
+	<package name="SendMessagePackage" extends="struts-default">
+		<action name="sendMessage" class="com.action.SendInformationAction">
+			<result name="success">/sendMessage.jsp</result>
+		</action>
+	</package>
+	
+	<package name="UploadPackage" extends="struts-default">
+		<action name="upload" class="com.action.UploadAction">
+			<result name="success">/resource.jsp</result>
+		</action>
+	</package>
+	
+	<!-- Android -->
+	<package name="AndroidLoginPackage" extends="struts-default"  namespace="/">
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+        <action name="loginAndroid" class="com.androidAction.LoginAndroidAction">
+        </action>    
+	</package>
+	
+	<package name="ShowACoursePackage" extends="struts-default"  namespace="/">
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+        <action name="showACourse" class="com.androidAction.ShowACourse">
+        </action>    
+	</package>
+	
+	<package name="RollCallAndroidPackage" extends="struts-default"  namespace="/">
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+        <action name="showTable" class="com.androidAction.ShowTable">
+        </action>    
+	</package>
+	
+	<package name="SignInAndroidPackage" extends="struts-default"  namespace="/">
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+        <action name="signinAndroid" class="com.androidAction.SignInAndroid">
+        </action>    
+	</package>
+	
+	<package name="ShowAllInformationPackage" extends="struts-default"  namespace="/">
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+        <action name="showAllInformation" class="com.androidAction.ShowAllInformation">
+        </action>    
+	</package>
+	
+	<package name="ShowSomeInformationPackage" extends="struts-default"  namespace="/">
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+        <action name="showSomeInformation" class="com.androidAction.ShowSomeInformation">
+        </action>    
+	</package>
+	
+	<package name="SendInformationPackage" extends="struts-default"  namespace="/">
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+        <action name="sendInformation" class="com.androidAction.SendInformation">
+        </action>    
+	</package>
+	
+	<package name="StudentSignInPackage" extends="struts-default"  namespace="/">
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+        <action name="studentSignIn" class="com.androidAction.StudentSignIn">
+        </action>    
+	</package>
+	
+	<package name="SendClassInformPackage" extends="struts-default"  namespace="/">
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+        <action name="classInform" class="com.androidAction.SendClassInform">
+        </action>    
+	</package>
+	
+	<package name="GetClassInformPackage" extends="struts-default"  namespace="/">
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+        <action name="getClassInform" class="com.androidAction.GetClassInform">
+        </action>    
+	</package>
+	
+	<package name="RollcallPackage" extends="struts-default"  namespace="/">
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+        <action name="rollcall" class="com.androidAction.RollCall">
+        </action>    
+	</package>
+	
+	<package name="DownLoadPackage" extends="struts-default"  namespace="/">
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+        <action name="downLoad" class="com.androidAction.DownLoad">
+        </action>    
+	</package>
+	
+	<package name="FindRollCallResultPackage" extends="struts-default"  namespace="/">
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+        <action name="findRollcall" class="com.androidAction.FindRollCallResult">
+        </action>    
+	</package>
+	
+	<package name="FindSignInResultPackage" extends="struts-default"  namespace="/">
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+        <action name="findSignin" class="com.androidAction.FindSignInResult">
+        </action>    
+	</package>
+<!-- 
+	<package name="AndroidLoginPackage" extends="json-default"> 
+		<action name="loginAndroid" class="com.androidAction.LoginAndroidAction">
+			<result name="success" type="json"><param name="root">jdata</param></result>
+            <result name="fail" type="json"><param name="root">jdata</param></result> 
+		</action>
+	</package>
+	 -->
+</struts>
