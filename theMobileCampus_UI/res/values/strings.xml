@@ -3,7 +3,13 @@
 
     <string name="app_name">校园通</string>
     <string name="action_settings">Settings</string>
-    <item name="Tag_APP" type="id"></item>
-    <item name="Tag_Book" type="id"></item>
+ 
+	<item type="id" name="tag_int"/>
+	<item type="id" name="tag_ifstudent"/>  
+	<item type="id" name="tag_pid"/> 
+	
+	
+	
+
 
 </resources>

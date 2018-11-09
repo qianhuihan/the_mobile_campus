@@ -15,6 +15,7 @@ import org.json.JSONObject;
 
 import com.example.bean.Courses;
 import com.example.bean.News;
+import com.example.bean.Students;
 import com.example.bean.Teachers;
 import com.google.gson.Gson;
 
@@ -38,6 +39,7 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 
 public class class_fragment extends Fragment{
+	private String http_url="http://192.168.31.202:8080/theMobileCampusSystem/";
 	private GridLayout gridLayout;
 	private View view;
 	private Button[] rbs=new Button[20];
@@ -98,7 +100,7 @@ public class class_fragment extends Fragment{
 		try
 		{
 			HttpClient client = new DefaultHttpClient();
-		    HttpPost httpPost = new HttpPost("http://192.168.1.102:8080/theMobileCampusSystem/showACourse?CID="+course.getCID());
+		    HttpPost httpPost = new HttpPost(http_url+"showACourse?CID="+course.getCID());
 		    HttpResponse httpResponse = client.execute(httpPost);
 	        HttpEntity entity = httpResponse.getEntity(); 
 	        
@@ -121,11 +123,25 @@ public class class_fragment extends Fragment{
             teacher.setPhone(jsonObject.getString("phone"));
             teacher.setAffiliation(jsonObject.getString("affiliation"));
             teacher.setTitle(jsonObject.getString("title"));
-     
-            Intent it = new Intent(getActivity(),concrete_course.class);
-            it.putExtra("course",new Gson().toJson(course));
-            it.putExtra("teacher",new Gson().toJson(teacher));          
-            startActivity(it);    
+            
+        	String userJson=getActivity().getIntent().getStringExtra("loginUser");
+        	Bundle bd1=getActivity().getIntent().getExtras();
+        	String job=bd1.getString("job");
+        	if(job.equals("student")){
+        		Students student=new Gson().fromJson(userJson,Students.class);
+        		Intent it = new Intent(getActivity(),concrete_course.class);
+                it.putExtra("course",new Gson().toJson(course));
+                it.putExtra("teacher",new Gson().toJson(teacher));
+                Bundle bd = new Bundle();
+                bd.putString("SID",student.getSID());
+                it.putExtras(bd);
+                startActivity(it);
+        	}
+        	else{
+        		Intent it = new Intent(getActivity(),concrete_course_teacher.class);
+                it.putExtra("course",new Gson().toJson(course));
+                startActivity(it);
+        	}        
 		}
 		catch(Exception e)
 		{

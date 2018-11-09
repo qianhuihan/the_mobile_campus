@@ -23,18 +23,18 @@
         android:layout_height="27dp"
         android:layout_marginRight="20sp"
         android:layout_alignParentRight="true"
-        android:background="@drawable/list_p" />
+        android:background="#fff" />
         </RelativeLayout > 
-
-        
-        <ListView android:layout_width="fill_parent"   
-                  android:layout_height="wrap_content"
-                  android:padding="10sp"
-                  android:background="#fff" 
-                  android:divider="#b5becd" 
-                  android:scrollbars="none"
-                  android:layout_marginBottom="55sp"
-                  android:dividerHeight="1px" 
-                  android:id="@+id/sm_MyListView"> 
-        </ListView>
-</LinearLayout> 
+        <ScrollView  
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:scrollbars="none">
+        <LinearLayout   
+        android:id="@+id/all_ll"
+        android:layout_width="fill_parent"    
+        android:orientation="vertical"  
+        android:layout_height="wrap_content"    
+        android:background="#fff"> 
+        </LinearLayout> 
+        </ScrollView>
+</LinearLayout>  

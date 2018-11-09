@@ -5,7 +5,10 @@ import com.google.gson.Gson;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
+import android.view.View.OnClickListener;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class concrete_news extends Activity{
@@ -25,12 +28,17 @@ public class concrete_news extends Activity{
     	
     	tv=(TextView)findViewById(R.id.news_editor);
     	tv.setText(conews.getEditor());
-    	
-    	tv=(TextView)findViewById(R.id.news_source);
-    	tv.setText(conews.getSource());
+
     	
     	tv=(TextView)findViewById(R.id.news_body);
     	tv.setText(conews.getBody());
+    	
+    	ImageButton button1 = (ImageButton)findViewById(R.id.news_back);  
+        button1.setOnClickListener(new OnClickListener() { 
+            public void onClick(View v) {
+            	finish();
+            }    
+        });  
     	
 	}
 }

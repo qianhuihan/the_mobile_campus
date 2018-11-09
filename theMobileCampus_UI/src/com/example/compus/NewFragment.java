@@ -7,6 +7,7 @@ import java.util.Map;
 
 import com.example.bean.Courses;
 import com.example.bean.News;
+import com.example.bean.Students;
 import com.example.compus.R.drawable;
 import com.google.gson.Gson;
 
@@ -50,6 +51,8 @@ public class NewFragment extends Fragment {
     private MyPagerAdapter myPagerAdapter;
     private Fragment fg;
     private News newsarray[]=new News[50];
+    private Students student;
+    private String sid=null;
     
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
     	
@@ -116,11 +119,22 @@ public class NewFragment extends Fragment {
         });
         item_first=(LinearLayout) view1.findViewById(R.id.item_first_linearLayout1);
         setitme_firstLayout();
-        
         item_second=(LinearLayout) view2.findViewById(R.id.item_second_linearLayout1);
         setitme_secondLayout();
-        
         setitme_thirdLayout();
+        
+        ImageButton button1 = (ImageButton) view.findViewById(R.id.fragment_imageButton1);
+        Bundle bd=getActivity().getIntent().getExtras();
+    	String job=bd.getString("job");
+        String userJson=getActivity().getIntent().getStringExtra("loginUser");
+        if(job.equals("student")){
+        	student=new Gson().fromJson(userJson,Students.class);
+        	button1.setBackgroundResource(R.drawable.p0);
+        	sid=student.getSID();
+        }
+        else{
+        	button1.setEnabled(false);
+        }
         return view; 
     }
     
@@ -132,6 +146,9 @@ public class NewFragment extends Fragment {
         button1.setOnClickListener(new OnClickListener() { 
             public void onClick(View v) {
             	Intent it = new Intent(getActivity(),importantMessage.class);
+            	Bundle bd = new Bundle();
+                bd.putString("SID",sid);
+                it.putExtras(bd);
             	startActivity(it);
             }    
         });  
@@ -187,11 +204,9 @@ public class NewFragment extends Fragment {
     	int resID;
     	try{
     		List<Map<String,News>> news=(List<Map<String, News>>) getActivity().getIntent().getSerializableExtra("conews");
-    		//List<News> news=(List<News>) getActivity().getIntent().getSerializableExtra("conews");
-
     	    for(int i=0;i<news.size();i++)
             {
-        	    News conew=new News();
+    	    	News conew=new News();
     	    	Map map=(Map)news.get(i);
     	    	conew.setDate((String) map.get("date"));
     	    	conew.setBody((String) map.get("body"));
@@ -238,8 +253,8 @@ public class NewFragment extends Fragment {
             	firstLinearLayout.setOnClickListener(new OnClickListener() { 
     		    	@Override
     		        	public void onClick(View v) {
-    		        		int i = (Integer) v.getTag();
-    		        		News conewarray=newsarray[i];
+    		        		int j = (Integer) v.getTag();
+    		        		News conewarray=newsarray[j];
     		        		Intent it = new Intent(getActivity(),concrete_news.class);
     		                it.putExtra("conews",new Gson().toJson(conewarray));          
     		                startActivity(it);  

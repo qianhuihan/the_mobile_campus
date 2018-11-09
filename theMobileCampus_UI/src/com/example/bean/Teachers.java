@@ -8,6 +8,7 @@ public class Teachers{
 	private String email;//邮箱
 	private String title;//职称
 	private String affiliation;//班主任从属，班级ID，若不是班主任，则为空
+	private String sex;//性别
 	
 	public Teachers(){}
 	
@@ -52,6 +53,14 @@ public class Teachers{
 	}
 	public void setAffiliation(String affiliation) {
 		this.affiliation = affiliation;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
 	}
 	
 	

@@ -7,6 +7,7 @@ public class Students {
 	private String phone;//手机号码
 	private String email;//邮箱
 	private String Sclass;//班级
+	private String sex;//性别
 	
 	public Students(){}
 
@@ -56,6 +57,14 @@ public class Students {
 
 	public void setSclass(String sclass) {
 		this.Sclass = sclass;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
 	}
 	
 	

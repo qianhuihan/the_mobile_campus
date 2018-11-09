@@ -49,14 +49,13 @@ public class mian_user extends FragmentActivity {
         @Override  
         public void onClick(View v) {
         	FragmentTransaction transaction1 = getSupportFragmentManager().beginTransaction();
-        	 hideAllFragment(transaction1);
+        	hideAllFragment(transaction1);
             switch (v.getId()) {  
                 case R.id.rbNew:
                 	if(fragment1== null){
                 		transaction1.add(R.id.fragment_container,getItem(RB_NEW));
                 	}
                 	else{
-                		//transaction1.show(fragment1);
                 		transaction1.replace(R.id.fragment_container,getItem(RB_NEW));
                     }
                     resetImg();

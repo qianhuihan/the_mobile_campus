@@ -20,6 +20,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.json.JSONObject;
 
+
 //import org.json.JSONArray;
 //import net.sf.json.JSONObject;
 import net.sf.json.JSONArray;
@@ -36,6 +37,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.bean.News;
+import com.example.bean.Resource;
 import com.example.bean.Students;
 import com.example.bean.Teachers;
 import com.google.gson.Gson;
@@ -46,6 +48,7 @@ public class MainActivity extends Activity {
 	 private EditText editText1;
 	 private EditText editText2;
 	 private RadioGroup linearLayout2;
+	 private String http_url="http://192.168.31.202:8080/theMobileCampusSystem/";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -102,7 +105,7 @@ public class MainActivity extends Activity {
 	private boolean login(String id, String password,String job)  { 
 		
 		HttpClient client = new DefaultHttpClient();
-	    HttpPost httpPost = new HttpPost("http://192.168.1.102:8080/theMobileCampusSystem/loginAndroid.action");
+	    HttpPost httpPost = new HttpPost(http_url+"loginAndroid.action");
 	    List<NameValuePair> params = new ArrayList<NameValuePair>(); 
 	    params.add(new BasicNameValuePair("loginname", id));
 	    params.add(new BasicNameValuePair("password", password)); 
@@ -141,6 +144,7 @@ public class MainActivity extends Activity {
                 student.setPassword(jsonObject.getString("password"));
                 student.setEmail(jsonObject.getString("email"));
                 student.setPhone(jsonObject.getString("phone"));
+                student.setSex(jsonObject.getString("sex"));
                 student.setSclass(jsonObject.getString("Sclass"));
                 
                 //传递电话数据
@@ -163,6 +167,11 @@ public class MainActivity extends Activity {
  				List<Map<String,News>> todaycourses= (List<Map<String,News>>) JSONArray.toCollection(todaycoursesObject,Map.class);
                 it.putExtra("todaycourses", (Serializable)todaycourses);
                 
+                //传递共享资源数据
+                JSONArray resourceObject = JSONArray.fromObject(json.get("resource").toString());
+ 				List<Map<String,Resource>> resource= (List<Map<String,Resource>>) JSONArray.toCollection(resourceObject,Map.class);
+                it.putExtra("resource", (Serializable)resource);
+                
                 //传递登录用户数据
                 it.putExtra("loginUser",new Gson().toJson(student));
                 it.putExtras(bd);
@@ -180,11 +189,37 @@ public class MainActivity extends Activity {
                 teacher.setPassword(jsonObject.getString("password"));
                 teacher.setEmail(jsonObject.getString("email"));
                 teacher.setPhone(jsonObject.getString("phone"));
+                teacher.setSex(jsonObject.getString("sex"));
                 teacher.setAffiliation(jsonObject.getString("affiliation"));
                 teacher.setTitle(jsonObject.getString("title"));
+                
+              //传递电话数据
+                JSONArray phoneObject = JSONArray.fromObject(json.get("phones").toString());
+                List<HashMap<String,String>> cophones= (List<HashMap<String,String>>) JSONArray.toCollection(phoneObject,HashMap.class);
+                it.putExtra("cophones", (Serializable)cophones);
+                
+                //传递新闻数据
+                JSONArray newsObject = JSONArray.fromObject(json.get("news").toString());
+ 				List<Map<String,News>> conews= (List<Map<String,News>>) JSONArray.toCollection(newsObject,Map.class);
+                it.putExtra("conews", (Serializable)conews);
+                
+                //传递课程表数据
+                JSONArray coursesObject = JSONArray.fromObject(json.get("allCourses").toString());
+ 				List<Map<String,News>> courses= (List<Map<String,News>>) JSONArray.toCollection(coursesObject,Map.class);
+                it.putExtra("courses", (Serializable)courses);
+                
+              //传递共享资源数据
+                JSONArray resourceObject = JSONArray.fromObject(json.get("resource").toString());
+ 				List<Map<String,Resource>> resource= (List<Map<String,Resource>>) JSONArray.toCollection(resourceObject,Map.class);
+                it.putExtra("resource", (Serializable)resource);
+                
+                //传递今日课程数据
+                JSONArray todaycoursesObject = JSONArray.fromObject(json.get("todayCourses").toString());
+ 				List<Map<String,News>> todaycourses= (List<Map<String,News>>) JSONArray.toCollection(todaycoursesObject,Map.class);
+                it.putExtra("todaycourses", (Serializable)todaycourses);
+                
                 it.putExtra("loginUser",new Gson().toJson(teacher));
                 it.putExtras(bd);
-                //将数据包Bundle绑定到Intent上
                 startActivity(it);//账号密码正确，跳转到主界面 
                 finish();
                 return true;

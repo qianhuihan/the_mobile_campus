@@ -29,7 +29,7 @@
         <LinearLayout
             android:layout_width="fill_parent"   
             android:layout_height="wrap_content"
-            android:orientation="vertical" >"
+            android:orientation="vertical" >
          <TextView
             android:id="@+id/coc_cname"
             android:layout_width="wrap_content"
@@ -93,11 +93,11 @@
             android:text="周三 1-2" />  
          </LinearLayout>
          <View style="@style/bg_line"/>
-         
          <LinearLayout
             android:layout_width="fill_parent"   
             android:layout_height="wrap_content"
-            android:padding="20sp"
+            android:layout_gravity="center"
+            android:padding="15sp"
             android:orientation="horizontal">
          <TextView
             android:layout_width="wrap_content"
@@ -114,10 +114,15 @@
             android:textSize="17sp"
             android:textColor="#5e6364"
             android:text="汪峰" />  
-          <ImageView 
-             android:layout_width="20sp"   
-             android:layout_height="20sp"
-             android:src="@drawable/teacher"/>
+          <ImageButton
+             android:id="@+id/coc_send"
+             android:layout_width="30sp"   
+             android:layout_height="30sp"
+             android:layout_marginLeft="30sp"
+             android:src="@drawable/sendmessage"
+             android:scaleType="fitCenter"
+             android:background="#ffffff"/>
+         
          </LinearLayout>
          
          <LinearLayout
@@ -185,15 +190,27 @@
             android:textColor="#000"
             android:text="29301718@126.com" />     
          </LinearLayout>
-         
-        <Button 
-            android:layout_width="150sp"
-            android:layout_height="50sp"
-            android:layout_gravity="center"
+         <LinearLayout
             android:layout_marginTop="40sp"
-            android:text="签    到"
-            android:background="#3aa3c5"
-            android:textColor="#fff"/>
+            android:layout_width="fill_parent"   
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">"
+        <ImageButton 
+            android:id="@+id/sign"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:background="#fff"
+            android:src="@drawable/sign"
+            android:scaleType="fitCenter"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击签到"
+            android:textColor="#6496dd"
+            android:layout_marginTop="5sp"
+            />
+        </LinearLayout>
      
         </LinearLayout>
 </LinearLayout>
